@@ -21,7 +21,7 @@ def load_data(file_path):
 
     # 解析并扁平化标签
     df['Flattened Labels'] = df.apply(
-        lambda row: flatten_labels(row, ["Action Fields", "Responsibility Fields", "Semantic Extension Fields"]),
+        lambda row: flatten_labels(row, ["Action Fields", "Liability Fields", "Extension Fields"]),
         axis=1
     )
 
