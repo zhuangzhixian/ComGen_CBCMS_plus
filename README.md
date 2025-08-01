@@ -1,6 +1,6 @@
 # ComGen for CBCMS+ (Compliance Policy Generator)
 
-This repository implements the **Compliance Policy Generator (ComGen)**, a Random Forest-based solution designed to generate compliance-related policies based on structured input features. The model is part of the CBCMS+ framework, enabling efficient, accurate, and real-time compliance policy generation for cross-border data transfers.
+This repository implements the **Compliance Policy Generator (ComGen)**, a Random Forest-based solution designed to generate compliance-related policies based on structured input features. The model is part of the CBCMS+ framework, enabling efficient, accurate, and real-time compliance policy generation, comprehensively supporting global software development.
 
 ## Features
 
@@ -34,7 +34,7 @@ ComGen_CBCMS_plus/
 
 1. Prepare your input data in the `data/raw/` directory, you can refer to the annotation manual. Ensure the dataset follows the specified format:
    - `Input Features`: A list of integers representing feature values, such as data category, sensitivity and jurisdictions.
-   - `Action Fields`, `Responsibility Fields`, `Semantic Extension Fields`: Lists of binary labels.
+   - `Action Fields`, `Liability Fields`, `Extension Fields`: Lists of binary labels.
 2. Run the following command to train and evaluate the model:
 
 ```bash
