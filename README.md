@@ -72,8 +72,11 @@ python src/main.py --data_path "data/raw/train_data.csv" --output_dir "output" -
 1. Prepare your input data in the `data/raw/` directory (refer to the annotation manual).
 2. Follow the format described in `data/README.md` and the **annotation manual** `data/ComGen_Annotation_Manual.pdf`.
 3. Ensure the dataset follows the specified format:
-   - `Input Features`: A list of integers representing feature values (data category, sensitivity, jurisdictions)
-   - `Action Fields`, `Liability Fields`, `Extension Fields`: Lists of binary labels
+   - **Input Features**: A list of integers representing feature values (data category, sensitivity, jurisdictions).
+   - **Action Fields**, **Liability Fields**, **Extension Fields**: Lists of binary labels.
+
+> **Note:** The original annotated dataset used for ComGen model training cannot be released publicly due to licensing constraints.  
+> Nonetheless, the accompanying annotation manual and schema specifications fully describe the dataset structure, enabling faithful reconstruction and replication of all results.
 
 ## Hyperparameter Configuration
 
