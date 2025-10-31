@@ -1,17 +1,24 @@
 import argparse
+import logging
 from train import train_and_evaluate
+from cross_validation import cross_validate_and_train
 
 # 数据文件路径
 DATA_PATH = "data/train_data.csv"
 
 def main(args):
     """
-    主函数，用于调用训练和评估功能。
+    主函数，用于调用训练和评估功能
 
     Args:
-        args: 命令行参数。
+        args: 命令行参数
     """
-    train_and_evaluate(args)
+    if args.cross_validate:
+        logging.info("Starting cross-validation training...")
+        cross_validate_and_train(args)
+    else:
+        logging.info("Starting standard training...")
+        train_and_evaluate(args)
 
 
 if __name__ == "__main__":
@@ -23,6 +30,7 @@ if __name__ == "__main__":
     parser.add_argument("--max_depth", type=int, default=15, help="Maximum depth of the trees.")
     parser.add_argument("--min_samples_split", type=int, default=5, help="Minimum number of samples required to split an internal node.")
     parser.add_argument("--min_samples_leaf", type=int, default=2, help="Minimum number of samples required to be at a leaf node.")
+    parser.add_argument("--cross_validate", action="store_true", help="Whether to perform cross-validation for hyperparameter tuning.")
 
     args = parser.parse_args()
 
